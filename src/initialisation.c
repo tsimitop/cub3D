@@ -83,6 +83,7 @@ void	init(t_var *data)
 	data->_mlx = mlx_init(data->config.width, data->config.height, "MAP", true);
 	if (!data->_mlx)
 	{
+		printf("INIT FAILED\n");
 		free_data(data);
 		exit(EXIT_FAILURE);
 	}

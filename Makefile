@@ -6,8 +6,8 @@ BUILD	= ./build
 SOURCE	= ./src
 
 # Other Variables:
-COMPILER:=	cc
-COMPFLAGS:=	-g #-fsanitize=address #-Wall -Werror -Wextra -Wno-unused-variable 
+COMPILER:= cc
+COMPFLAGS:=	-g -fsanitize=address #-Wall -Werror -Wextra -Wno-unused-variable 
 DEFINES = -D DEBUG=1
 
 # Source Files:
@@ -80,7 +80,7 @@ LIBRARYS	:= $(LFT)/libft.a
 ifeq ($(shell uname),Darwin)
 	LIBRARYS += $(LIBMLX)/libmlx42.a -framework OpenGL -framework IOKit -lglfw
 else ifeq ($(shell uname),Linux)
-	LIBRARYS += $(LIBMLX)/libmlx42.a -Iinc -Ilib/libft -ldl -lglfw3 -pthread -lm
+	LIBRARYS += $(LIBMLX)/libmlx42.a -Iinc -Ilib/libft -ldl -lglfw -pthread -lm
 endif
 RED = "\033[38;2;255;51;51m"
 GRN = "\033[38;2;170;255;170m"

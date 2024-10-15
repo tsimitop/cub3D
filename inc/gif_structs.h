@@ -16,6 +16,7 @@
 # include "../ft_libft/inc/libft.h"
 # include <stdlib.h>
 # include <sys/types.h>
+# include <stdint.h>
 
 typedef struct s_gd_palette {
 	int			size;

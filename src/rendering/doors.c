@@ -12,7 +12,7 @@
 
 #include "../../inc/rendering.h"
 
-void	toggle_doors(mlx_key_data_t key, t_var *data)
+void	toggle_doors(t_var *data)
 {
 	char	c;
 	int		char_x;
@@ -38,21 +38,21 @@ void	toggle_doors(mlx_key_data_t key, t_var *data)
 				data->map_render_img->height * sizeof(int));
 }
 
-void	trace_step(t_var *data, t_draw_ray *draw_r)
-{
-	if (draw_r->s_dist.x < draw_r->s_dist.y)
-	{
-		draw_r->s_dist.x += draw_r->d_dist.x;
-		draw_r->map.x += draw_r->step.x;
-		draw_r->side = 1;
-	}
-	else
-	{
-		draw_r->s_dist.y += draw_r->d_dist.y;
-		draw_r->map.y += draw_r->step.y;
-		draw_r->side = 0;
-	}
-}
+// void	trace_step(t_draw_ray *draw_r)
+// {
+// 	if (draw_r->s_dist.x < draw_r->s_dist.y)
+// 	{
+// 		draw_r->s_dist.x += draw_r->d_dist.x;
+// 		draw_r->map.x += draw_r->step.x;
+// 		draw_r->side = 1;
+// 	}
+// 	else
+// 	{
+// 		draw_r->s_dist.y += draw_r->d_dist.y;
+// 		draw_r->map.y += draw_r->step.y;
+// 		draw_r->side = 0;
+// 	}
+// }
 
 int	check_door(int i, t_var *data)
 {
@@ -94,7 +94,7 @@ void	draw_loop(t_var *data, mlx_texture_t *tex, int height, int raynum)
 	while (++y < height)
 	{
 		if (!data || !data->rays || midpoint + y < 0 || midpoint + y > \
-												data->main_render_img->height)
+											(int)data->main_render_img->height)
 			continue ;
 		perc_y = (double)y / (double)height;
 		perc_x = data->rays[raynum].wall_percent;

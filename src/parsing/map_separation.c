@@ -25,7 +25,7 @@ void	free_split(char **str)
 	free(str);
 }
 
-int	non_space_character(t_var *data, char **map)
+int	non_space_character(char **map)
 {
 	int	x;
 	int	y;
@@ -48,7 +48,6 @@ int	non_space_character(t_var *data, char **map)
 int	check_space_separation(t_var *data)
 {
 	int			i;
-	t_intvctr	position;
 	t_intvctr	map_size;
 	char		**map_cpy;
 
@@ -69,7 +68,7 @@ int	check_space_separation(t_var *data)
 	map_size.x = data->map_height;
 	map_size.y = data->map_width;
 	fill_iter(map_cpy, map_size, 0, i);
-	if (non_space_character(data, map_cpy))
+	if (non_space_character(map_cpy))
 		return (free_split(map_cpy), 1);
 	return (free_split(map_cpy), 0);
 }

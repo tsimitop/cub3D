@@ -14,8 +14,6 @@
 
 void	print_data(t_var *data)
 {
-	int	i;
-
 	printf("Ceiling\t%i\t\e[48;2;%i;%i;%im      \e[0m\n", \
 					data->ceiling, (data->ceiling >> 24) % 256, \
 					(data->ceiling >> 16) % 256, (data->ceiling >> 8) % 256);
@@ -42,8 +40,8 @@ bool	checks(t_var *data)
 		texture_init(data->path_westh, &data->textures[west]) || \
 		data->path_easth == NULL || \
 		texture_init(data->path_easth, &data->textures[east]) || \
-		data->has_door && (data->path_door == NULL || \
-		texture_init(data->path_door, &data->textures[door])) || \
+		(data->has_door && (data->path_door == NULL || \
+		texture_init(data->path_door, &data->textures[door]))) || \
 		data->player.x == 0 || \
 		data->player.y == 0 || \
 		(data->direct.x == 0 && \

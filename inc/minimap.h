@@ -34,7 +34,7 @@ void	draw_player_triangle(t_var *data);
 
 // map_plane
 
-void	toggle_map(mlx_key_data_t key, t_var *data);
+void	toggle_map(t_var *data);
 void	filler(t_var *data);
 void	layout_color(t_var *data, int zoom_x, int zoom_y, char c);
 void	mini_filler(t_var *data, int x, int y, char c);

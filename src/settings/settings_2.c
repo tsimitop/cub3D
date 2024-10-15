@@ -14,6 +14,8 @@
 
 void	style_setting(double xdelta, double ydelta, t_var *data)
 {
+	(void)xdelta;
+	(void)ydelta;
 	printf("\e[3;1H\e[9J");
 	data->config.ray_style += 1;
 	i_limit(&data->config.ray_style, 0, 3);
@@ -25,6 +27,7 @@ void	style_setting(double xdelta, double ydelta, t_var *data)
 
 void	offset_setting(double xdelta, double ydelta, t_var *data)
 {
+	(void)xdelta;
 	printf("\e[3;1H\e[9J");
 	if (data->config.ray_style == 0)
 	{
@@ -46,6 +49,7 @@ void	height_setting(double xdelta, double ydelta, t_var *data)
 	int32_t	sh;
 	int32_t	sw;
 
+	(void)xdelta;
 	mlx_get_monitor_size(0, &sw, &sh);
 	printf("\e[3;1H\e[9J");
 	data->config.height += (int)ydelta;
@@ -66,6 +70,7 @@ void	width_setting(double xdelta, double ydelta, t_var *data)
 	int32_t	sh;
 	int32_t	sw;
 
+	(void)xdelta;
 	mlx_get_monitor_size(0, &sw, &sh);
 	printf("\e[3;1H\e[9J");
 	if (ydelta > 0 && data->config.width >= WIDTH)

@@ -13,7 +13,7 @@
 #include "../../inc/gif_structs.h"
 #include "../../inc/gifdec.h"
 
-void	inits(t_gd_gif *gif, int interlace, t_gif_read_vars *vars)
+void	inits(t_gd_gif *gif, t_gif_read_vars *vars)
 {
 	vars->start = lseek(gif->fd, 0, SEEK_CUR);
 	discard_sub_blocks(gif);
@@ -32,7 +32,7 @@ void	inits(t_gd_gif *gif, int interlace, t_gif_read_vars *vars)
 	vars->frm_size = gif->fw * gif->fh;
 }
 
-int	key_stuff(t_gd_gif *gif, int interlace, t_gif_read_vars *vars)
+int	key_stuff(t_gd_gif *gif, t_gif_read_vars *vars)
 {
 	if (vars->key == vars->clear)
 	{
@@ -95,10 +95,10 @@ int	read_image_data(t_gd_gif *gif, int interlace)
 	vars.key_size = (int) vars.byte;
 	if (vars.key_size < 2 || vars.key_size > 8)
 		return (-1);
-	inits(gif, interlace, &vars);
+	inits(gif, &vars);
 	while (vars.frm_off < vars.frm_size)
 	{
-		if (key_stuff(gif, interlace, &vars) == -1)
+		if (key_stuff(gif, &vars) == -1)
 			return (-1);
 		if (vars.key == vars.clear)
 			continue ;

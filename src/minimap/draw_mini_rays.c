@@ -51,6 +51,6 @@ void	draw_fov_lines(t_var *data)
 
 void	prot_put_pixel(mlx_image_t *img, uint32_t x, uint32_t y, int color)
 {
-	if (x < img->width && y < img->height && x >= 0 && y >= 0)
+	if (x < img->width && y < img->height)
 		mlx_put_pixel(img, x, y, color);
 }

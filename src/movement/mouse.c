@@ -15,7 +15,6 @@
 void	cursor_hook(double xpos, double ypos, void *param)
 {
 	t_var			*data;
-	mouse_mode_t	mouse;
 
 	data = (t_var *)param;
 	if (0 < xpos && xpos < WIDTH && 0 < ypos && ypos < HEIGHT && \
@@ -43,22 +42,21 @@ void	mouse_action(t_var *data)
 	if (data->mouse == 0)
 	{
 		printf("\e[2J\e[3;1H");
-		enable_file(data);
+		enable_file();
 		data->mouse = 1;
 	}
 	else if (data->mouse == 1)
 	{
 		printf("\e[2J\e[3;1H");
-		disable_file(data);
+		disable_file();
 		data->mouse = 0;
 	}
 }
 
-void	disable_file(t_var *data)
+void	disable_file(void)
 {
 	int		fd;
 	char	*line;
-	int		i;
 
 	fd = open("src/movement/mouse_printing_files/mouse_disabled", O_RDONLY);
 	if (fd == -1)
@@ -74,7 +72,7 @@ void	disable_file(t_var *data)
 		close(fd);
 }
 
-void	print_enabled_character(t_var *data, char *line, int *i)
+void	print_enabled_character(char *line, int *i)
 {
 	if (line[*i] == 'R')
 	{
@@ -97,7 +95,7 @@ void	print_enabled_character(t_var *data, char *line, int *i)
 		printf("%c", line[*i]);
 }
 
-void	enable_file(t_var *data)
+void	enable_file()
 {
 	int		fd;
 	char	*line;
@@ -111,7 +109,7 @@ void	enable_file(t_var *data)
 	{
 		i = -1;
 		while (line[++i])
-			print_enabled_character(data, line, &i);
+			print_enabled_character(line, &i);
 		free(line);
 		line = get_next_line(fd);
 	}

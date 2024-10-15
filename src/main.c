@@ -37,7 +37,7 @@ void	toggle_key_hook(mlx_key_data_t key, t_var *data)
 	if (key.action == 1)
 	{
 		if (key.key == MLX_KEY_M)
-			toggle_map(key, data);
+			toggle_map(data);
 		else if (key.key == MLX_KEY_G)
 		{
 			data->settings = !data->settings;
@@ -45,7 +45,7 @@ void	toggle_key_hook(mlx_key_data_t key, t_var *data)
 				print_setting(data);
 		}
 		else if (key.key == MLX_KEY_SPACE)
-			toggle_doors(key, data);
+			toggle_doors(data);
 	}
 }
 

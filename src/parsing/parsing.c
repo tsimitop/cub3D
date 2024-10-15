@@ -15,12 +15,10 @@
 int32_t	parse_input(int argc, char **argv, t_var *data)
 {
 	t_list	*text;
-	int32_t	map_width;
 	int32_t	map_start;
 
 	if (argument_count(argc) || file_name(argv))
 		return (1);
-	map_width = 0;
 	map_start = 0;
 	text = NULL;
 	if (file_read(argv[1], &text))

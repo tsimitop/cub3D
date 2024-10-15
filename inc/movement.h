@@ -52,8 +52,8 @@ double	max_step(t_var *data, double side);
 
 // mouse
 
-void	enable_file(t_var *data);
-void	disable_file(t_var *data);
+void	enable_file();
+void	disable_file(void);
 void	mouse_action(t_var *data);
 
 #endif

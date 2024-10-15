@@ -62,7 +62,7 @@ int	first_map_line(char *str)
 	return (1);
 }
 
-int	newline_space_check(char *read_line, int fd, int map_switch)
+int	newline_space_check(char *read_line, int map_switch)
 {
 	if (check_if_only_space(read_line))
 	{
@@ -93,7 +93,7 @@ int	map_horizontally_invalid(char *read_line, int fd, t_list **text)
 	map_switch = 0;
 	while (read_line)
 	{
-		temp = newline_space_check(read_line, fd, map_switch);
+		temp = newline_space_check(read_line, map_switch);
 		if (temp == 1)
 			return (ft_lstclear(text, free), 1);
 		else if (temp == 2)

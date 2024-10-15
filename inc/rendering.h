@@ -23,7 +23,7 @@ void	put_slice(t_var *data, int i);
 void	render_view(t_var *data);
 
 // doors
-void	toggle_doors(mlx_key_data_t key, t_var *data);
+void	toggle_doors(t_var *data);
 int		check_door(int i, t_var *data);
 
 void	draw_line_b(t_var *data, int height, int raynum);

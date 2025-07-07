@@ -1,6 +1,6 @@
 # 🧊 Cub3D
 
-Cub3D is a simplified 3D graphics engine based on raycasting, inspired by *Wolfenstein 3D*. This project aims to deepen our understanding of 3D rendering, vector math, and event-driven programming using the **MLX** graphics library.
+Cub3D is the second team project in the 42 core curriculum (partner->[Clemens](https://github.com/c8p2d01). It is a simplified 3D graphics engine based on raycasting, inspired by *Wolfenstein 3D*. This project aims to deepen our understanding of 3D rendering, vector math, and event-driven programming using the **MLX** graphics library.
 <img width="1792" alt="Screenshot 2025-07-07 at 1 07 24 PM" src="https://github.com/user-attachments/assets/ff28eda2-a427-4295-bbd0-5c61ea6ef4ea" />
 
 ---
@@ -99,8 +99,28 @@ ESC	Exit game
 Mouse look if enabled with v during play.
 
 ## 🗂 Map Format
-The map file must follow a specific format:
-DO for door is optional.
+- The map **must be surrounded by walls** (`1`).
+- Player start position must be one of the following:
+  - `N`, `S`, `E`, or `W`.
+- The following identifiers are **mandatory**:
+  - `NO`, `SO`, `WE`, `EA` – Wall textures
+  - Floor and Ceiling RGB colors
+- `DO` for door is **optional**.
+- Use `2` for a **closed door**, `3` for an **open door**.
+
+---
+
+# Legend:
+
+| Symbol | Meaning        |
+|--------|----------------|
+| ` `    | Nothing/Space  |
+| `1`    | Wall           |
+| `0`    | Empty space    |
+| `2`    | Closed door    |
+| `3`    | Open door      |
+| `N`/`S`/`E`/`W` | Player starting position |
+
 ```bash
 NO images/DEBUG/North.png
 SO images/DEBUG/South.png
@@ -117,8 +137,8 @@ C 225,30,0
 111111
 ```
 
-DO for door is optional. NO, SO, WE, EA are mandatory.
-Map must be surrounded by walls (1).
-Player start position: N, S, E, or W.
-Floor/Ceiling RGB colors and wall textures are mandatory.
-2 for a closed door, 3 for an open door.
+-DO for door is optional. NO, SO, WE, EA are mandatory.
+-Map must be surrounded by walls (1).
+-Player start position: N, S, E, or W.
+-Floor/Ceiling RGB colors and wall textures are mandatory.
+-2 for a closed door, 3 for an open door.

@@ -88,15 +88,19 @@ make
 
 You can find the valid maps inside the maps directory. You can also attempt making your own map.
 
+---
+
 ## 🕹 Controls
-Key	Action
-W / ↑	Move forward
-S / ↓	Move backward
-A	Strafe left
-D	Strafe right
-← / →	Turn left/right
-ESC	Exit game
-Mouse look if enabled with v during play.
+- Key	Action
+- W / ↑	Move forward
+- S / ↓	Move backward
+- A	Strafe left
+- D	Strafe right
+- ← / →	Turn left/right
+- ESC	Exit game
+- Mouse look if enabled with v during play.
+
+----
 
 ## 🗂 Map Format
 - The map **must be surrounded by walls** (`1`).

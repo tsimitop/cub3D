@@ -12,8 +12,6 @@ Cub3D is the second team project in the 42 core curriculum (partner->[Clemens](h
 - [🚀 Getting Started](#-getting-started)
 - [🕹 Controls](#-controls)
 - [🗂 Map Format](#-map-format)
-- [📸 Screenshots](#-screenshots)
-- [📚 Resources](#-resources)
 
 ---
 

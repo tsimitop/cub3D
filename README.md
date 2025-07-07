@@ -43,7 +43,7 @@ This project teaches:
 - ✅ Customizable settings
 
 # Minimap
--Activate/deactivate minimap (press m). Some settings are visible in the minimap so make sure to have it activated when you check them out for the first time.
+- Activate/deactivate minimap (press m). Some settings are visible in the minimap so make sure to have it activated when you check them out for the first time.
 <img width="440" alt="Screenshot 2025-07-07 at 1 24 52 PM" src="https://github.com/user-attachments/assets/db173fbf-8963-460c-b75a-a828cf1da346" />
 
 # Door mechanics

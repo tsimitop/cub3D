@@ -108,7 +108,7 @@ int32_t	calculate_color(char *rgb)
 	else
 	{
 		color = (ft_atoi(values[0]) % 256) << 24 |(ft_atoi(values[1]) % 256) \
-								<< 16 | (ft_atoi(values[2]) % 256) << 8 | 256;
+								<< 16 | (ft_atoi(values[2]) % 256) << 8 | 255;
 	}
 	free_2dstr(values);
 	return (color);

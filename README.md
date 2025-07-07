@@ -118,7 +118,7 @@ You can find the valid maps inside the maps directory. You can also attempt maki
 
 | Symbol | Meaning        |
 |--------|----------------|
-| ` `    | Nothing/Space  |
+| 'space'| Nothing/Space  |
 | `1`    | Wall           |
 | `0`    | Empty space    |
 | `2`    | Closed door    |
@@ -141,8 +141,8 @@ C 225,30,0
 111111
 ```
 
--DO for door is optional. NO, SO, WE, EA are mandatory.
--Map must be surrounded by walls (1).
--Player start position: N, S, E, or W.
--Floor/Ceiling RGB colors and wall textures are mandatory.
--2 for a closed door, 3 for an open door.
+- DO for door is optional. NO, SO, WE, EA are mandatory.
+- Map must be surrounded by walls (1).
+- Player start position: N, S, E, or W.
+- Floor/Ceiling RGB colors and wall textures are mandatory.
+- 2 for a closed door, 3 for an open door.

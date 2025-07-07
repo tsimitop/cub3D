@@ -1,6 +1,6 @@
-# 🧊 Cub3D
+# 🧊🎮 Cub3D
 
-Cub3D is the second team project in the 42 core curriculum (partner->[Clemens](https://github.com/c8p2d01). It is a simplified 3D graphics engine based on raycasting, inspired by *Wolfenstein 3D*. This project aims to deepen our understanding of 3D rendering, vector math, and event-driven programming using the **MLX** graphics library.
+Cub3D is the second team project in the 42 core curriculum (partner->[Clemens])(https://github.com/c8p2d01). It is a simplified 3D graphics engine based on raycasting, inspired by *Wolfenstein 3D*. This project aims to deepen our understanding of 3D rendering, vector math, and event-driven programming using the **MLX** graphics library.
 <img width="1792" alt="Screenshot 2025-07-07 at 1 07 24 PM" src="https://github.com/user-attachments/assets/ff28eda2-a427-4295-bbd0-5c61ea6ef4ea" />
 
 ---
